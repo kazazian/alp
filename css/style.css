@@ -25,12 +25,12 @@ button {
 }
 
 .container,
-.hero__inner {
+.screen-inner {
     width: min(1120px, calc(100% - 32px));
     margin: 0 auto;
 }
 
-.hero {
+.screen {
     padding: 20px 0 56px;
     background: #1f2328;
 }
@@ -98,98 +98,116 @@ button {
     background: #d92c1f;
 }
 
-.hero-grid {
+.cards {
     display: grid;
     grid-template-columns: minmax(0, 1.35fr) minmax(0, 1.35fr) minmax(260px, 0.86fr);
     grid-template-rows: 318px 152px 152px;
     gap: 16px;
 }
 
-.hero-card {
-    padding: 24px;
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 24px;
     border-radius: 24px;
     background: #2b3037;
     color: #ffffff;
 }
 
-.hero-card-main {
+.card-main {
     grid-column: 1 / 3;
     grid-row: 1 / 3;
     min-height: 486px;
     padding: 32px 36px;
     background: #343a43;
+    background-image: url("./../assets/image-1133.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
 }
 
-.hero-card-sky {
+.card-sky {
     grid-column: 3;
     grid-row: 1;
+     padding-left: 10px;
     min-height: 318px;
+    background-image: url("./../assets/image-1133.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
 }
 
-.hero-card-blue {
+.card-blue {
+    padding-left: 10px;
     grid-column: 3;
     grid-row: 2 / 4;
     min-height: 320px;
+    background-image: url("./../assets/image-1133.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
 }
 
-.hero-card-lilac {
+.card-lilac {
     grid-column: 1;
     grid-row: 3;
     min-height: 152px;
+    background-image: url("./../assets/image-1133.png");
+
 }
 
-.hero-card-sand {
+.card-sand {
     grid-column: 2;
     grid-row: 3;
     min-height: 152px;
+    background-image: url("./../assets/image-1133.png");
+
 }
 
-.hero-card-side,
-.hero-card-wide {
-    display: flex;
-    align-items: flex-start;
+.card-side,
+.card-wide {
+    align-items: stretch;
 }
 
-.hero-card__content {
+.card-content {
     display: flex;
     flex-direction: column;
     gap: 10px;
     max-width: 520px;
 }
 
-.hero-card-main .hero-card__content {
-    height: 100%;
+.card-main .card-content {
     max-width: 560px;
-    justify-content: space-between;
+    gap: 14px;
 }
 
-.hero-card h1 {
+.card h1 {
     font-size: clamp(36px, 5vw, 64px);
     line-height: 1;
     font-weight: 800;
 }
 
-.hero-card h2 {
+.card h2 {
     font-size: 26px;
     line-height: 1.1;
     font-weight: 800;
 }
 
-.hero-card-sky h2 {
+.card-sky h2 {
     max-width: 220px;
 }
 
-.hero-card-blue h2 {
+.card-blue h2 {
     max-width: 210px;
 }
 
-.hero-card-wide h2 {
+.card-wide h2 {
     max-width: 320px;
 }
 
-.hero-card-wide .hero-card__content {
-    justify-content: center;
-    height: 100%;
+.card-wide .card-content {
+    justify-content: flex-start;
 }
 
 .eyebrow {
@@ -216,13 +234,16 @@ button {
 }
 
 .section-lifted .container {
-    padding: 32px;
+    width: 100%;
+    max-width: none;
+    padding: 32px 200px;
     border-radius: 32px;
     background: #ffffff;
 }
 
 .section-heading {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
     gap: 20px;
@@ -230,7 +251,7 @@ button {
 }
 
 .section-heading-tabs {
-    align-items: center;
+    align-items: flex-start;
 }
 
 .section-heading h2,
@@ -255,9 +276,12 @@ button {
     display: inline-flex;
     align-items: center;
     border-radius: 999px;
+    border: 0;
     background: #eceff3;
     color: #6f7782;
     font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .tab-active,
@@ -289,6 +313,11 @@ button {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    justify-content: flex-start;
+    background-image: url("./../assets/image-1133.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
 }
 
 .product-card h3,
@@ -313,8 +342,13 @@ button {
     min-height: 260px;
     padding: 32px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
     background: #e9edf1;
+    background-image: url("./../assets/image-1133.png");
+
 }
 
 .partner-banner__content {
@@ -335,7 +369,10 @@ button {
     padding: 22px;
     background: #eceff3;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
 }
 
 .service-card-rates {
@@ -384,13 +421,18 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 16px;
+    background-image: url("./../assets/image-1133.png");
+
 }
 
 .offer-card-action {
     min-height: 88px;
     grid-column: 2;
+    display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
 }
 
 .arrow-btn {
@@ -425,6 +467,10 @@ button {
 .about-card-feature {
     grid-row: span 2;
     min-height: 376px;
+    background-image: url("./../assets/image-1133.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
 }
 
 .about-list {
@@ -434,35 +480,41 @@ button {
     list-style: disc;
 }
 
+.about-card:not(.about-card-feature) {
+    background-image: url("./../assets/image-1133.png");
+    background-repeat: no-repeat;
+
+}
+
 @media (max-width: 1080px) {
     .services-grid,
     .about-grid {
         grid-template-columns: 1fr;
     }
 
-    .hero-grid {
+    .cards {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
     }
 
-    .hero-card-main,
-    .hero-card-sky,
-    .hero-card-blue,
-    .hero-card-lilac,
-    .hero-card-sand {
+    .card-main,
+    .card-sky,
+    .card-blue,
+    .card-lilac,
+    .card-sand {
         grid-column: auto;
         grid-row: auto;
     }
 
-    .hero-card-main {
+    .card-main {
         min-height: 320px;
         grid-column: 1 / -1;
     }
 
-    .hero-card-sky,
-    .hero-card-blue,
-    .hero-card-lilac,
-    .hero-card-sand {
+    .card-sky,
+    .card-blue,
+    .card-lilac,
+    .card-sand {
         min-height: 180px;
     }
 
@@ -485,11 +537,11 @@ button {
 }
 
 @media (max-width: 760px) {
-    .hero {
+    .screen {
         padding-bottom: 40px;
     }
 
-    .hero-grid {
+    .cards {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
@@ -515,7 +567,24 @@ button {
         padding: 24px;
     }
 
-    .hero-card,
+    .block-image-main,
+    .block-image-banner,
+    .block-image-about-main {
+        height: 140px;
+    }
+
+    .block-image-side,
+    .block-image-card,
+    .block-image-offer,
+    .block-image-about {
+        height: 80px;
+    }
+
+    .block-image-wide {
+        height: 56px;
+    }
+
+    .card,
     .product-card,
     .service-card,
     .offer-card,
@@ -523,17 +592,17 @@ button {
         padding: 20px;
     }
 
-    .hero-card h1,
+    .card h1,
     .section-heading h2,
     .partner-banner h2 {
         font-size: 32px;
     }
 
-    .hero-card-main,
-    .hero-card-sky,
-    .hero-card-blue,
-    .hero-card-lilac,
-    .hero-card-sand {
+    .card-main,
+    .card-sky,
+    .card-blue,
+    .card-lilac,
+    .card-sand {
         min-height: auto;
     }
 }

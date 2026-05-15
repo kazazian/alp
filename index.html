@@ -12,8 +12,8 @@
 </head>
 <body>
     <div class="page-shell">
-        <header class="hero">
-            <div class="hero__inner">
+        <header class="screen">
+            <div class="screen-inner">
                 <nav class="topbar">
                     <div class="brand">
                         <span class="brand__mark">A</span>
@@ -29,36 +29,37 @@
                     </div>
                 </nav>
 
-                <section class="hero-grid">
-                    <article class="hero-card hero-card-main">
-                        <div class="hero-card__content">
+                <section class="cards">
+                    <article class="card card-main">
+                        <div class="card-content">
                             <p class="eyebrow">Альфа-Вклад</p>
                             <h1>Успейте получить до 22% годовых</h1>
                             <p class="muted">Только до 31 мая</p>
                             <button class="btn btn-accent">Открыть вклад</button>
                         </div>
+                      
                     </article>
 
-                    <article class="hero-card hero-card-side hero-card-sky">
-                        <div class="hero-card__content">
+                    <article class="card card-side card-sky">
+                        <div class="card-content">
                             <h2>Кредитная карта</h2>
                         </div>
                     </article>
 
-                    <article class="hero-card hero-card-wide hero-card-lilac">
-                        <div class="hero-card__content">
+                    <article class="card card-wide card-lilac">
+                        <div class="card-content">
                             <h2>Кредит наличными</h2>
                         </div>
                     </article>
 
-                    <article class="hero-card hero-card-wide hero-card-sand">
-                        <div class="hero-card__content">
+                    <article class="card card-wide card-sand">
+                        <div class="card-content">
                             <h2>Бесплатная Альфа-Карта</h2>
                         </div>
                     </article>
 
-                    <article class="hero-card hero-card-side hero-card-blue">
-                        <div class="hero-card__content">
+                    <article class="card card-side card-blue">
+                        <div class="card-content">
                             <h2>Инвестируйте и зарабатывайте</h2>
                         </div>
                     </article>
@@ -71,45 +72,45 @@
                 <div class="container">
                     <div class="section-heading section-heading-tabs">
                         <h2>Выбирайте лучшее</h2>
-                        <div class="tabs">
-                            <button class="tab tab-active">Для всех</button>
-                            <button class="tab">Малому бизнесу</button>
-                            <button class="tab">Крупному бизнесу</button>
+                        <div class="tabs" data-filter-group="products">
+                            <button class="tab tab-active" data-filter-key="all">Для всех</button>
+                            <button class="tab" data-filter-key="small">Малому бизнесу</button>
+                            <button class="tab" data-filter-key="corp">Крупному бизнесу</button>
                         </div>
                     </div>
 
                     <div class="product-grid">
                         <article class="product-card">
-                            <h3>Дебетовые карты</h3>
-                            <p>Суперкэшбэк до 100%</p>
+                            <h3 class="js-product-title">Дебетовые карты</h3>
+                            <p class="js-product-text">Суперкэшбэк до 100%</p>
                         </article>
                         <article class="product-card">
-                            <h3>Кредитные карты</h3>
-                            <p>Обслуживание бесплатно</p>
+                            <h3 class="js-product-title">Кредитные карты</h3>
+                            <p class="js-product-text">Обслуживание бесплатно</p>
                         </article>
                         <article class="product-card">
-                            <h3>Кредиты</h3>
-                            <p>Оформите онлайн</p>
+                            <h3 class="js-product-title">Кредиты</h3>
+                            <p class="js-product-text">Оформите онлайн</p>
                         </article>
                         <article class="product-card">
-                            <h3>Накопления</h3>
-                            <p>Деньги с хорошими процентами</p>
+                            <h3 class="js-product-title">Накопления</h3>
+                            <p class="js-product-text">Деньги с хорошими процентами</p>
                         </article>
                         <article class="product-card">
-                            <h3>Инвестиции</h3>
-                            <p>Начните зарабатывать</p>
+                            <h3 class="js-product-title">Инвестиции</h3>
+                            <p class="js-product-text">Начните зарабатывать</p>
                         </article>
                         <article class="product-card">
-                            <h3>Ипотека</h3>
-                            <p>Одобрение за 30 секунд</p>
+                            <h3 class="js-product-title">Ипотека</h3>
+                            <p class="js-product-text">Одобрение за 30 секунд</p>
                         </article>
                         <article class="product-card">
-                            <h3>Alfa Only</h3>
-                            <p>Ваш премиальный сервис</p>
+                            <h3 class="js-product-title">Alfa Only</h3>
+                            <p class="js-product-text">Ваш премиальный сервис</p>
                         </article>
                         <article class="product-card">
-                            <h3>Для детей и семьи</h3>
-                            <p>Карты с кэшбэком</p>
+                            <h3 class="js-product-title">Для детей и семьи</h3>
+                            <p class="js-product-text">Карты с кэшбэком</p>
                         </article>
                     </div>
                 </div>
@@ -188,27 +189,27 @@
                 <div class="container">
                     <div class="section-heading">
                         <h2>Пользуйтесь выгодными предложениями в наших сервисах</h2>
-                        <div class="services-pills">
-                            <span class="pill pill-active">Альфа-Мобайл</span>
-                            <span class="pill">Альфа-Тревел</span>
-                            <span class="pill">Афиша</span>
-                            <span class="pill">Заправки</span>
-                            <span class="pill">Подписки</span>
-                            <span class="pill">Страхование</span>
+                        <div class="services-pills" data-filter-group="offers">
+                            <button class="pill pill-active" data-filter-key="mobile">Альфа-Мобайл</button>
+                            <button class="pill" data-filter-key="travel">Альфа-Тревел</button>
+                            <button class="pill" data-filter-key="afisha">Афиша</button>
+                            <button class="pill" data-filter-key="fuel">Заправки</button>
+                            <button class="pill" data-filter-key="subs">Подписки</button>
+                            <button class="pill" data-filter-key="safe">Страхование</button>
                         </div>
                     </div>
 
                     <div class="offers-grid">
                         <article class="offer-card offer-card-large">
                             <div>
-                                <h3>Альфа-выгодная связь</h3>
-                                <p>50 ГБ, 500 минут и бонусы</p>
+                                <h3 class="js-offer-title">Альфа-выгодная связь</h3>
+                                <p class="js-offer-text">50 ГБ, 500 минут и бонусы</p>
                             </div>
                         </article>
                         <article class="offer-card offer-card-pink">
                             <div>
-                                <h3>Безлимитный интернет</h3>
-                                <p>Бесплатно и навсегда с тарифом Лайт</p>
+                                <h3 class="js-offer-title">Безлимитный интернет</h3>
+                                <p class="js-offer-text">Бесплатно и навсегда с тарифом Лайт</p>
                             </div>
                         </article>
                         <article class="offer-card offer-card-action">
@@ -225,17 +226,17 @@
                 <div class="container">
                     <div class="section-heading section-heading-tabs">
                         <h2>О банке</h2>
-                        <div class="tabs">
-                            <button class="tab tab-active">Достижения</button>
-                            <button class="tab">Работа в Альфе</button>
+                        <div class="tabs" data-filter-group="about">
+                            <button class="tab tab-active" data-filter-key="wins">Достижения</button>
+                            <button class="tab" data-filter-key="job">Работа в Альфе</button>
                         </div>
                     </div>
 
                     <div class="about-grid">
                         <article class="about-card about-card-feature">
                             <div>
-                                <h3>Альфа-Банк - лучший работодатель России</h3>
-                                <p>Три года подряд по версии рейтингов</p>
+                                <h3 class="js-about-title">Альфа-Банк - лучший работодатель России</h3>
+                                <p class="js-about-text">Три года подряд по версии рейтингов</p>
                             </div>
                         </article>
 
@@ -261,5 +262,6 @@
             </section>
         </main>
     </div>
+    <script src="./script.js"></script>
 </body>
 </html>
