@@ -167,6 +167,7 @@ button {
 
 .card-side,
 .card-wide {
+    padding-left: 10px;
     align-items: stretch;
 }
 
