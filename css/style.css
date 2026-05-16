@@ -427,6 +427,14 @@ button {
 
 }
 
+.offer-card-compact {
+    min-height: 156px;
+}
+
+.offer-card-tall {
+    min-height: 220px;
+}
+
 .offer-card-action {
     min-height: 88px;
     grid-column: 2;
@@ -434,6 +442,18 @@ button {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+
+.offer-card-action-left {
+    grid-column: 1;
+}
+
+.offer-card-action-right {
+    grid-column: 2;
+}
+
+.offer-card-action-wide {
+    grid-column: 1 / -1;
 }
 
 .arrow-btn {

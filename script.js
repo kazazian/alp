@@ -59,6 +59,29 @@ const offerStates = {
     ]
 };
 
+const offerLayouts = [
+    {
+        actionClass: "offer-card-action-right",
+        firstClass: "offer-card-tall",
+        secondClass: "offer-card-compact"
+    },
+    {
+        actionClass: "offer-card-action-left",
+        firstClass: "offer-card-compact",
+        secondClass: "offer-card-tall"
+    },
+    {
+        actionClass: "offer-card-action-wide",
+        firstClass: "offer-card-compact",
+        secondClass: "offer-card-compact"
+    },
+    {
+        actionClass: "offer-card-action-right",
+        firstClass: "offer-card-tall",
+        secondClass: "offer-card-tall"
+    }
+];
+
 const aboutStates = {
     wins: [
         "Альфа-Банк - лучший работодатель России",
@@ -112,8 +135,36 @@ function bindOffers() {
         return;
     }
 
+    const grid = document.querySelector(".js-offers-grid");
+    const cards = Array.from(document.querySelectorAll(".js-offer-card"));
+    const actionCard = document.querySelector(".js-offer-action");
     const titles = document.querySelectorAll(".js-offer-title");
     const texts = document.querySelectorAll(".js-offer-text");
+
+    function applyRandomOfferLayout() {
+        const layout = offerLayouts[Math.floor(Math.random() * offerLayouts.length)];
+        const shouldSwap = Math.random() > 0.5;
+
+        cards.forEach((card) => {
+            card.classList.remove("offer-card-compact", "offer-card-tall");
+        });
+
+        actionCard.classList.remove(
+            "offer-card-action-left",
+            "offer-card-action-right",
+            "offer-card-action-wide"
+        );
+
+        const orderedCards = shouldSwap ? [cards[1], cards[0]] : [cards[0], cards[1]];
+
+        orderedCards.forEach((card) => {
+            grid.insertBefore(card, actionCard);
+        });
+
+        orderedCards[0].classList.add(layout.firstClass);
+        orderedCards[1].classList.add(layout.secondClass);
+        actionCard.classList.add(layout.actionClass);
+    }
 
     group.addEventListener("click", (event) => {
         const button = event.target.closest(".pill");
@@ -133,6 +184,8 @@ function bindOffers() {
         texts.forEach((text, index) => {
             text.textContent = state[index][1];
         });
+
+        applyRandomOfferLayout();
     });
 }
 
